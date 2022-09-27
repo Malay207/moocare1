@@ -77,7 +77,7 @@ let xhr = new XMLHttpRequest();
 // let buffalos = document.getElementById("buffalos");
 let animal = document.getElementsByClassName('animal');
 
-document.getElementById("btn").addEventListener("click", function () {
+document.getElementById("btn1").addEventListener("click", function () {
     let checkboxes = document.getElementsByClassName('animal');
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked == true) {

@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="index.css">
     <title>Anicare</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -113,14 +119,8 @@
         .logo {
             height: 3rem;
             position: relative;
-            right: 1.5rem;
+            right: -0.5rem;
         }
-
-        .carousel-container {
-            height: 13rem;
-            /* background: #eee; */
-        }
-
 
         .pincode-search-container {
             display: flex;
@@ -236,45 +236,29 @@
                 <img src="https://www.kindpng.com/picc/m/172-1725992_cow-cow-head-logo-png-transparent-png.png"
                     alt="Cow - Cow Head Logo Png, Transparent Png@kindpng.com" class="logo">
             </div>
-        </div>`
+        </div>
 
 
         <div class="carousel-container">
             <!--! space for carousel -->
-            <div class="slider">
-                <div id="left" class="btn_cntr" onclick="left()">
-                    <button class="btn">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                </div>
 
-                <div class="slider_img">
-                    <!-- <img src="https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg"
-                        class="first" alt=""> -->
+            <div id="left" class="btn_cntr" onclick="left()">
+                <button class="btn"><i class="fas fa-chevron-left"></i></button>
+            </div>
 
-                    <!-- <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
-                        alt="">
+            <div class="slider_img">
+                <img class="slider_iamg" src="Untitled-2 1.png" alt="">
+                <img class="slider_iamg" src="SamplePNGImage_100kbmb 1.png" alt="">
+                <img class="slider_iamg" src="Untitled (3) 1.png" alt="">
+            </div>
 
-                    <img src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?k=20&m=517188688&s=612x612&w=0&h=i38qBm2P-6V4vZVEaMy_TaTEaoCMkYhvLCysE7yJQ5Q="
-                        alt="">
-                    <img src="https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg"
-                        alt=""> -->
-                    <img class="slider_iamg" src="Untitled-2 1.png" alt="">
-                    <img class="slider_iamg" src="SamplePNGImage_100kbmb 1.png" alt="">
-                    <img class="slider_iamg" src="Untitled (3) 1.png" alt="">
 
-                    <!-- <img src="https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg"
-                        class="last" alt=""> -->
-                </div>
-
-                <div id="right" class="btn_cntr" onclick="right()">
-                    <button class="btn">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
+            <div id="right" class="btn_cntr" onclick="right()">
+                <button class="btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </div>
+
     <!--! pincode search -->
     <div class="pincode-search-container">
         <div class="pincode-search-inline-container">
@@ -283,32 +267,33 @@
         </div>
     </div>
     <!-- provide service for -->
-    <div class="service" id="service">
-        <h2> we provide service for</h2>
-        <div class="service_for">
-            <div class="cointainer">
-                <ul class="select">
-                    <li><input type="checkbox" id="cow" class="animal" onclick="return chk()">cow</li>
-                    <li><input type="checkbox" id="buffalos" class="animal" onclick="return chk()">buffalo</li>
-                    <li><input type="checkbox" id="goats" class="animal" onclick="return chk()">goats</li>
-                    <li><input type="checkbox" id="dogs" class="animal" onclick="return chk()">dogs</li>
-                </ul>
-                <div id="go">
-                    <button id="btn">GO</button>
+    <div>
+        <div class="service" id="service">
+            <h2> we provide service for</h2>
+            <div class="service_for">
+                <div class="cointainer">
+                    <ul class="select">
+                        <li><input type="checkbox" id="cow" class="animal" onclick="return chk()">cow</li>
+                        <li><input type="checkbox" id="buffalos" class="animal" onclick="return chk()">buffalo</li>
+                        <li><input type="checkbox" id="goats" class="animal" onclick="return chk()">goats</li>
+                        <li><input type="checkbox" id="dogs" class="animal" onclick="return chk()">dogs</li>
+                    </ul>
+                    <div id="go">
+                        <button id="btn1">GO</button>
+                    </div>
+                </div>
+                <div>
+                    <span id="notvalid"></span>
                 </div>
             </div>
-            <div>
-                <span id="notvalid"></span>
-            </div>
+        </div>
+        <!-- provide services  -->
+        <div class="provide_service">
+            <h2 class="h3">Our cosset services</h2>
+            <div id="services"></div>
         </div>
     </div>
-    <!-- provide services  -->
-    <div class="provide_service">
-        <h2 class="h3">Our cosset services</h2>
-        <div id="services"></div>
-    </div>
 
-    </div>
     <script src="index.js"></script>
 
     <script>
