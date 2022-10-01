@@ -60,6 +60,7 @@ function chk() {
         if (checkboxes[i].checked == true) {
             count++;
         }
+
     }
     if (count > 1) {
         document.getElementById("notvalid").innerHTML = "**You can only choose one animal at a time";
@@ -71,10 +72,6 @@ function chk() {
     }
 }
 let xhr = new XMLHttpRequest();
-// let cow = document.getElementById("cow");
-// let dog = document.getElementById("dog");
-// let goat = document.getElementById("goat");
-// let buffalos = document.getElementById("buffalos");
 let animal = document.getElementsByClassName('animal');
 
 document.getElementById("btn1").addEventListener("click", function () {
@@ -93,11 +90,8 @@ document.getElementById("btn1").addEventListener("click", function () {
             else {
                 xhr.open("GET", "dog.html", true);
             }
-
         }
-
     }
-
     xhr.onload = function () {
         if (xhr.status == 200) {
 
