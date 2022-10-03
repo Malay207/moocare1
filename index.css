@@ -358,9 +358,9 @@ h4 {
     color: rgb(243, 247, 243);
     background-color: rgb(145, 224, 145);
     padding: 10px;
-    /* position: fixed;
+    position: fixed;
     top: 35px;
-    right: 0; */
+    right: 0;
     z-index: 1;
     border-left: 10px solid green;
     border-radius: 5px;
