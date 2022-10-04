@@ -119,7 +119,7 @@ class display {
             text = "message succesfuly sent.";
         }
         else {
-            text = "something went wrong!";
+            text = "Error!";
         }
         display2.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>${text}</strong> ${display}
@@ -129,9 +129,12 @@ class display {
             display2.innerHTML = ''
         }, 3000);
     }
-    ValidateEmail() {
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contact.email.value)) {
+    ValidateEmail(contact) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contact.email)) {
             return true;
+        }
+        else {
+            return false;
         }
 
     }
@@ -139,7 +142,7 @@ class display {
         if (contact.name.length < 3 || contact.name.length > 20) {
             return false;
         }
-        else if (contact.email.length < 3 || contact.email.length > 20 && !this.ValidateEmail()) {
+        else if (!this.ValidateEmail(contact) || contact.email.length < 3) {
             return false;
         }
         else if (contact.message.length < 5) {
@@ -154,10 +157,12 @@ class display {
 };
 let btn = document.getElementsByClassName("sendbtn")[0];
 btn.addEventListener("click", function (e) {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("mail").value;
-    let message = document.getElementById("message").value;
-    let contact1 = new contact(name, email, message);
+    e.preventDefault();
+
+    let name = document.getElementById("name");
+    let email = document.getElementById("mail");
+    let message = document.getElementById("message");
+    let contact1 = new contact(name.value, email.value, message.value);
     let display1 = new display();
     if (name == "" || email == "" || message == "") {
 
@@ -166,14 +171,19 @@ btn.addEventListener("click", function (e) {
         document.getElementsByClassName("alert")[0].style.borderLeftColor = "red";
     }
     else if (display1.validate(contact1)) {
-        display1.show("message succesfuly sent.", "message succesfuly sent");
+        display1.show("message succesfuly sent.", "Thankyou for contacting us");
+        name.value = "";
+        email.value = "";
+        message.value = "";
 
     }
     else {
-        display1.show("something went wrong!", "something went wrong!");
+        display1.show("Error!", "Please fill all the details correctly");
         document.getElementsByClassName("alert")[0].style.backgroundColor = "#e05e5e";
         document.getElementsByClassName("alert")[0].style.borderLeftColor = "red";
 
     }
-    e.preventDefault();
+    console.log(contact1);
+
+
 });

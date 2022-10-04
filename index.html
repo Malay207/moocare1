@@ -328,20 +328,22 @@
         </div>
 
         <div class="contact">
-            <div id="display"></div>
+
             <div class="contact-info">
                 <div><i class="fa-solid fa-envelope"></i>contact@gmail.com</div>
                 <div><i class="fa-solid fa-phone"></i>0000 0000 0000</div>
                 <div><i class="fa-solid fa-clock"></i>8am-5pm</div>
                 <div><i class="fa-solid fa-location-dot"></i>location</div>
             </div>
+            <span id="display"></span>
 
             <div class="contactform">
                 <form action="" method="post">
-                    <input type="text" class="textbox" id="name" placeholder="your name">
-                    <input type="email" class="textbox" id="mail" placeholder="your mail">
-                    <textarea name="message" id="message" cols="30" rows="5" placeholder="your message..."></textarea>
-                    <input type="button" class="sendbtn" name="submit" value="send">
+                    <input type="text" class="textbox" id="name" placeholder="your name" required>
+                    <input type="email" class="textbox" id="mail" placeholder="your mail" required>
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="your message..."
+                        required></textarea>
+                    <input type="submit" class="sendbtn" name="submit" value="send">
 
                 </form>
             </div>
