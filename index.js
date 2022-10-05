@@ -125,9 +125,9 @@ class display {
         <strong>${text}</strong> ${display}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>`;
-        setTimeout(function () {
-            display2.innerHTML = ''
-        }, 3000);
+        // setTimeout(function () {
+        //     display2.innerHTML = ''
+        // }, 3000);
     }
     ValidateEmail(contact) {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contact.email)) {

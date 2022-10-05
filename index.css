@@ -71,15 +71,13 @@ h2 {
 }
 
 .select li {
-
-
     padding-right: 35px;
     font-size: 15px;
     font-weight: 600;
     color: #000;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-top: 1px;
     cursor: pointer;
 }
@@ -158,6 +156,10 @@ h2 {
         position: relative;
         right: 1rem;
         top: 5px;
+    }
+
+    .select li {
+        margin-right: 50px;
     }
 
     /* #about-cointainer {
@@ -352,15 +354,13 @@ h4 {
         line-height: 35px;
         font-size: 15px;
     }
+
 }
 
 .alert {
     color: rgb(243, 247, 243);
     background-color: rgb(145, 224, 145);
     padding: 10px;
-    position: fixed;
-    top: 35px;
-    right: 0;
     z-index: 1;
     border-left: 10px solid green;
     border-radius: 5px;
@@ -368,4 +368,6 @@ h4 {
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 10px;
 }
