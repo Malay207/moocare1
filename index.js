@@ -5,10 +5,11 @@ let img = document.querySelector(".slider_img");
 // const imgSize = img1[0].clientWidth;
 let translate = 0;
 setInterval(() => {
-    if (translate >= 0 && translate < 200) {
+    if (translate >= 0 && translate < 300) {
         translate += 100;
+
     }
-    // else if (img[translate].classList.contains("last")) {
+    // else if (img.classList.contains("last")) {
     //     img.style.transition = "none";
     //     translate = translate - 200;
     //     img.style.transform = `translateX(-${translate}%)`;
@@ -125,9 +126,9 @@ class display {
         <strong>${text}</strong> ${display}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>`;
-        // setTimeout(function () {
-        //     display2.innerHTML = ''
-        // }, 3000);
+        setTimeout(function () {
+            display2.innerHTML = ''
+        }, 3000);
     }
     ValidateEmail(contact) {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contact.email)) {
@@ -183,7 +184,6 @@ btn.addEventListener("click", function (e) {
         document.getElementsByClassName("alert")[0].style.borderLeftColor = "red";
 
     }
-    console.log(contact1);
 
 
 });

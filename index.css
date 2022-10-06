@@ -1,22 +1,19 @@
+.carousel-container {
+    height: 13rem;
+    display: flex;
+    padding: 20px 0;
+    overflow: hidden;
+    /* background: #eee; */
+}
+
 .slider_img {
     display: flex;
     height: 13rem;
     /* padding-left: 5px; */
-
-    margin-bottom: 0%;
-
 }
 
 .slider_iamg {
     width: 100%;
-}
-
-@media screen and (min-width: 1000px) {
-
-    .slider_iamg {
-        width: 100%;
-        padding: 0 6em;
-    }
 }
 
 
@@ -176,13 +173,6 @@ h2 {
 
 }
 
-.carousel-container {
-    height: 13rem;
-    display: flex;
-    padding: 20px 0;
-    overflow: hidden;
-    /* background: #eee; */
-}
 
 #about-cointainer {
     background-color: white;

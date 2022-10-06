@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="index.css">
     <title>Anicare</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -103,6 +105,7 @@
 
         .main-logo-container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             width: fit-content;
@@ -113,9 +116,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: cursive;
             position: relative;
             bottom: 2.5rem;
+        }
+
+        h5 {
+            position: relative;
+            bottom: 3rem;
+            left: 2rem;
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-weight: 800;
+            font-family: cursive;
         }
 
         .logo {
@@ -173,6 +186,10 @@
 
             .logo-inline-container {
                 bottom: 0.8rem;
+            }
+
+            h5 {
+                bottom: 1.5rem;
             }
         }
     </style>
@@ -234,10 +251,11 @@
         <!--! logo -->
         <div class="main-logo-container">
             <div class="logo-inline-container">
-                <h1>Anicare</h1>
+                <h1>CARETICA</h1>
                 <img src="https://www.kindpng.com/picc/m/172-1725992_cow-cow-head-logo-png-transparent-png.png"
                     alt="Cow - Cow Head Logo Png, Transparent Png@kindpng.com" class="logo">
             </div>
+            <h5>Pet Care</h5>
         </div>
 
 
